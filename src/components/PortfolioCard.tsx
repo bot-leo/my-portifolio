@@ -27,12 +27,12 @@ const PortfolioCard: React.FC = () => {
         <div className="glass-card rounded-2xl shadow-glow flex-grow flex flex-col relative overflow-hidden animate-float">
           <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
           
-          <div className="relative flex-grow">
-            <HomeSection active={activeSection === 'home'} />
-            <ExperienceSection active={activeSection === 'experience'} />
-            <ProjectsSection active={activeSection === 'projects'} />
-            <AboutSection active={activeSection === 'about'} />
-            <ContactSection active={activeSection === 'contact'} />
+          <div className="relative flex-grow overflow-y-auto p-4 md:p-8">
+            {activeSection === 'home' && <HomeSection active={true} />}
+            {activeSection === 'experience' && <ExperienceSection active={true} />}
+            {activeSection === 'projects' && <ProjectsSection active={true} />}
+            {activeSection === 'about' && <AboutSection active={true} />}
+            {activeSection === 'contact' && <ContactSection active={true} />}
           </div>
         </div>
       </div>

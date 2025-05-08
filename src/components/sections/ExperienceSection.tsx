@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Briefcase } from 'lucide-react';
@@ -95,20 +94,17 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ active }) => {
   ];
 
   return (
-    <div className={cn(
-      'card-content p-6 md:p-10',
-      active ? 'opacity-100 z-10' : 'opacity-0 z-0'
-    )}>
+    <div className="animate-fade-in">
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gradient flex items-center">
         <Briefcase className="mr-2" /> Experiência Profissional
       </h2>
       
-      <div className="space-y-10 overflow-y-auto pr-2 max-h-[calc(100vh-200px)]">
+      <div className="space-y-10 overflow-y-auto max-h-[calc(100vh-300px)]">
         {experiences.map((exp, index) => (
           <div 
             key={exp.id} 
             className={cn(
-              "relative border-l-2 border-futuristic-purple/30 pl-6 pb-4 animate-fade-in",
+              "relative border-l-2 border-futuristic-purple/30 pl-6 pb-4",
               {"animate-delay-100": index === 1, "animate-delay-200": index === 2, "animate-delay-300": index === 3}
             )}
           >

@@ -18,11 +18,12 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection
     { id: 'about', label: 'Sobre' },
     { id: 'experience', label: 'Formação' },
     { id: 'projects', label: 'Projetos' },
+    { id: 'contact', label: 'Contato' }
   ];
 
   return (
-    <nav className="flex justify-center mt-8 mb-4 md:mt-10 md:mb-6">
-      <ul className="flex space-x-2 md:space-x-6">
+    <nav className="flex justify-center mt-6 mb-2 md:mt-8 md:mb-4">
+      <ul className="flex space-x-2 md:space-x-6 flex-wrap justify-center">
         {navItems.map((item) => (
           <li key={item.id}>
             <button

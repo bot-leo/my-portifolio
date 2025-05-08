@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Folder, Link, Github } from 'lucide-react';
@@ -49,10 +48,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ active }) => {
   ];
 
   return (
-    <div className={cn(
-      'card-content p-6 md:p-10',
-      active ? 'opacity-100 z-10' : 'opacity-0 z-0'
-    )}>
+    <div className="animate-fade-in">
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gradient flex items-center">
         <Folder className="mr-2" /> Projetos
       </h2>
@@ -62,7 +58,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ active }) => {
           <div 
             key={project.id}
             className={cn(
-              "bg-black/20 backdrop-blur-sm rounded-xl overflow-hidden border border-white/5 hover:border-futuristic-purple/30 transition-all duration-300 animate-fade-in",
+              "bg-black/20 backdrop-blur-sm rounded-xl overflow-hidden border border-white/5 hover:border-futuristic-purple/30 transition-all duration-300",
               {"animate-delay-100": index === 1, "animate-delay-200": index === 2}
             )}
           >

@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { cn } from '@/lib/utils';
 import { User } from 'lucide-react';
 
 interface Skill {
@@ -25,16 +24,13 @@ const AboutSection: React.FC<AboutSectionProps> = ({ active }) => {
   ];
 
   return (
-    <div className={cn(
-      'card-content p-6 md:p-10',
-      active ? 'opacity-100 z-10' : 'opacity-0 z-0'
-    )}>
+    <div className="animate-fade-in">
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gradient flex items-center">
         <User className="mr-2" /> Sobre mim
       </h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="animate-fade-in">
+        <div>
           <h3 className="text-xl font-bold mb-4 text-futuristic-lightpurple">Quem sou</h3>
           <p className="text-gray-300 mb-4">
             Sou um desenvolvedor frontend apaixonado por criar experiências web incríveis e de alto desempenho.
@@ -60,7 +56,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ active }) => {
           </div>
         </div>
         
-        <div className="animate-fade-in animate-delay-100">
+        <div>
           <h3 className="text-xl font-bold mb-4 text-futuristic-lightpurple">Habilidades</h3>
           <div className="space-y-4">
             {skills.map(skill => (

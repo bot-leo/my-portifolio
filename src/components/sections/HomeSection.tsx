@@ -48,10 +48,7 @@ const SkillProgressCircle = ({ name, percentage }: { name: string; percentage: n
 
 const HomeSection: React.FC<HomeSectionProps> = ({ active }) => {
   return (
-    <div className={cn(
-      'card-content p-6 md:p-10',
-      active ? 'opacity-100 z-10' : 'opacity-0 z-0'
-    )}>
+    <div className="animate-fade-in">
       <div className="flex flex-col md:flex-row h-full">
         {/* Left side - Profile */}
         <div className="md:w-1/3 flex flex-col items-center border-r border-white/10 pr-6">

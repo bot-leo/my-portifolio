@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import { cn } from '@/lib/utils';
 import { Mail, Linkedin, Github, Twitter, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
@@ -39,16 +38,13 @@ const ContactSection: React.FC<ContactSectionProps> = ({ active }) => {
   };
 
   return (
-    <div className={cn(
-      'card-content p-6 md:p-10',
-      active ? 'opacity-100 z-10' : 'opacity-0 z-0'
-    )}>
+    <div className="animate-fade-in">
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gradient flex items-center">
         <Mail className="mr-2" /> Contato
       </h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="animate-fade-in">
+        <div>
           <h3 className="text-xl font-bold mb-6 text-futuristic-lightpurple">Entre em contato</h3>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
@@ -109,7 +105,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ active }) => {
           </form>
         </div>
         
-        <div className="animate-fade-in animate-delay-100">
+        <div className="animate-delay-100">
           <h3 className="text-xl font-bold mb-6 text-futuristic-lightpurple">Informações de contato</h3>
           
           <div className="space-y-6">
