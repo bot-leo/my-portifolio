@@ -1,12 +1,10 @@
 
 import React from 'react';
-import { Home, Briefcase, Folder, User, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface NavigationItem {
   id: string;
   label: string;
-  icon: React.ElementType;
 }
 
 interface NavigationProps {
@@ -16,11 +14,10 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection }) => {
   const navItems: NavigationItem[] = [
-    { id: 'home', label: 'Início', icon: Home },
-    { id: 'experience', label: 'Experiência', icon: Briefcase },
-    { id: 'projects', label: 'Projetos', icon: Folder },
-    { id: 'about', label: 'Sobre', icon: User },
-    { id: 'contact', label: 'Contato', icon: Mail },
+    { id: 'home', label: 'Inicio' },
+    { id: 'about', label: 'Sobre' },
+    { id: 'experience', label: 'Formação' },
+    { id: 'projects', label: 'Projetos' },
   ];
 
   return (
@@ -31,15 +28,14 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection
             <button
               onClick={() => setActiveSection(item.id)}
               className={cn(
-                'flex flex-col items-center transition-all duration-300 p-2 rounded-lg',
+                'px-6 py-2 rounded-full transition-all duration-300',
                 activeSection === item.id
-                  ? 'text-futuristic-purple scale-110'
-                  : 'text-gray-400 hover:text-futuristic-lightpurple'
+                  ? 'bg-white text-futuristic-darkpurple'
+                  : 'text-gray-200 hover:bg-white/10'
               )}
               aria-label={item.label}
             >
-              <item.icon size={20} className="mb-1" />
-              <span className="text-xs md:text-sm">{item.label}</span>
+              <span className="text-sm md:text-base font-medium">{item.label}</span>
             </button>
           </li>
         ))}

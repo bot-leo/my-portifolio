@@ -37,7 +37,7 @@ const PortfolioCard: React.FC = () => {
         </div>
       </div>
       <footer className="text-center p-4 text-gray-500 text-sm">
-        <p>© {new Date().getFullYear()} Lucas Developer - Desenvolvedor Frontend</p>
+        <p>© {new Date().getFullYear()} Leonardo Lima De Souza - Desenvolvedor Web & Mobile</p>
       </footer>
     </div>
   );
