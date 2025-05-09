@@ -23,8 +23,8 @@ const PortfolioCard: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-6xl mx-auto h-full flex flex-col">
-      <div className="p-4 md:p-8 flex-grow flex flex-col">
+    <div className="w-full max-w-6xl mx-auto h-full flex flex-col px-4 md:px-8">
+      <div className="py-4 md:py-8 flex-grow flex flex-col">
         <div className="glass-card rounded-2xl shadow-glow flex flex-col relative overflow-hidden animate-float h-[80vh] md:h-[70vh]">
           <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
           
