@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { useTheme } from './ThemeProvider';
 import { Menu } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 import { 
   Sheet,
   SheetContent,
@@ -22,6 +23,7 @@ interface NavigationProps {
 const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection }) => {
   const { theme } = useTheme();
   const [open, setOpen] = useState(false);
+  const isMobile = useIsMobile();
   
   const navItems: NavigationItem[] = [
     { id: 'home', label: 'Inicio' },
@@ -66,19 +68,6 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection
   const MobileNav = () => (
     <div className="md:hidden">
       <Sheet open={open} onOpenChange={setOpen}>
-        <SheetTrigger asChild>
-          <button 
-            className={cn(
-              'p-2 rounded-full',
-              theme === 'dark'
-                ? 'bg-white/10 hover:bg-white/20 text-white'
-                : 'bg-black/5 hover:bg-black/10 text-gray-800'
-            )}
-            aria-label="Menu"
-          >
-            <Menu className="h-5 w-5" />
-          </button>
-        </SheetTrigger>
         <SheetContent side="top" className={cn(
           'pt-12',
           theme === 'dark'
@@ -112,10 +101,11 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection
     </div>
   );
 
+  // We're now only returning the desktop nav as we've moved the mobile nav to the Index.tsx
   return (
     <nav className="flex justify-center mt-6 mb-2 md:mt-8 md:mb-4">
       <DesktopNav />
-      <MobileNav />
+      {/* Mobile nav is now rendered in Index.tsx */}
     </nav>
   );
 };

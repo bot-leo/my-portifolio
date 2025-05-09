@@ -7,9 +7,11 @@ import ProjectsSection from './sections/ProjectsSection';
 import AboutSection from './sections/AboutSection';
 import ContactSection from './sections/ContactSection';
 import { ScrollArea } from './ui/scroll-area';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const PortfolioCard: React.FC = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleNavigate = (e: CustomEvent) => {
@@ -25,7 +27,7 @@ const PortfolioCard: React.FC = () => {
   return (
     <div className="w-full max-w-6xl mx-auto h-full flex flex-col px-4 md:px-8">
       <div className="py-4 md:py-8 flex-grow flex flex-col">
-        <div className="glass-card rounded-2xl shadow-glow flex flex-col relative overflow-hidden animate-float h-[80vh] md:h-[70vh]">
+        <div className={`glass-card rounded-2xl shadow-glow flex flex-col relative overflow-hidden ${!isMobile ? 'animate-float' : ''} h-[80vh] md:h-[70vh]`}>
           <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
           
           <ScrollArea className="flex-grow p-4 md:p-8">
