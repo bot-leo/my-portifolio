@@ -7,6 +7,7 @@
 
 @layer base {
   :root {
+    /* Dark theme variables (default) */
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
@@ -27,6 +28,42 @@
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
     --radius: 1rem;
+    --background-start: #1A1F2C;
+    --background-end: #000000;
+    --background-effect-1: rgba(155, 135, 245, 0.2);
+    --background-effect-2: rgba(51, 195, 240, 0.2);
+    --card-bg: rgba(0, 0, 0, 0.3);
+    --card-border: rgba(255, 255, 255, 0.1);
+  }
+
+  .light-theme {
+    /* Light theme variables */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 252 80% 55%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 252 80% 55%;
+    --radius: 1rem;
+    --background-start: #f3f4f6;
+    --background-end: #e5e7eb;
+    --background-effect-1: rgba(155, 135, 245, 0.15);
+    --background-effect-2: rgba(51, 195, 240, 0.15);
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --card-border: rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -36,8 +73,10 @@
   }
   
   body {
-    @apply bg-gradient-to-br from-futuristic-darkpurple to-black text-foreground antialiased h-screen overflow-hidden;
+    @apply antialiased h-screen overflow-hidden;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+    background: linear-gradient(to bottom right, var(--background-start), var(--background-end));
+    color: hsl(var(--foreground));
   }
 
   html {
@@ -56,7 +95,10 @@
   }
 
   .glass-card {
-    @apply bg-black/30 backdrop-blur-xl border border-white/10 shadow-card;
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   }
   
   .text-gradient {
@@ -73,4 +115,13 @@
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+/* Update Navigation styling for light theme */
+.light-theme .glass-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.light-theme footer {
+  @apply text-gray-600;
 }

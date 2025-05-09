@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { useTheme } from './ThemeProvider';
 
 interface NavigationItem {
   id: string;
@@ -13,6 +14,7 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection }) => {
+  const { theme } = useTheme();
   const navItems: NavigationItem[] = [
     { id: 'home', label: 'Inicio' },
     { id: 'about', label: 'Sobre' },
@@ -31,8 +33,12 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection
               className={cn(
                 'px-6 py-2 rounded-full transition-all duration-300',
                 activeSection === item.id
-                  ? 'bg-white text-futuristic-darkpurple'
-                  : 'text-gray-200 hover:bg-white/10'
+                  ? theme === 'dark' 
+                    ? 'bg-white text-futuristic-darkpurple' 
+                    : 'bg-futuristic-darkpurple text-white'
+                  : theme === 'dark'
+                    ? 'text-gray-200 hover:bg-white/10'
+                    : 'text-gray-600 hover:bg-black/10'
               )}
               aria-label={item.label}
             >
