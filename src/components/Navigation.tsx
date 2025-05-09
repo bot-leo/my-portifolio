@@ -1,14 +1,8 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { cn } from '@/lib/utils';
 import { useTheme } from './ThemeProvider';
-import { Menu } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
-import { 
-  Sheet,
-  SheetContent,
-  SheetTrigger
-} from './ui/sheet';
 
 interface NavigationItem {
   id: string;
@@ -22,7 +16,6 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection }) => {
   const { theme } = useTheme();
-  const [open, setOpen] = useState(false);
   const isMobile = useIsMobile();
   
   const navItems: NavigationItem[] = [
@@ -32,11 +25,6 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection
     { id: 'projects', label: 'Projetos' },
     { id: 'contact', label: 'Contato' }
   ];
-
-  const handleItemClick = (id: string) => {
-    setActiveSection(id);
-    setOpen(false);
-  };
 
   // Desktop navigation
   const DesktopNav = () => (
@@ -63,49 +51,11 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection
       ))}
     </ul>
   );
-  
-  // Mobile navigation
-  const MobileNav = () => (
-    <div className="md:hidden">
-      <Sheet open={open} onOpenChange={setOpen}>
-        <SheetContent side="top" className={cn(
-          'pt-12',
-          theme === 'dark'
-            ? 'bg-futuristic-darkpurple border-white/10'
-            : 'bg-white border-gray-200'
-        )}>
-          <ul className="flex flex-col space-y-2 mt-4">
-            {navItems.map((item) => (
-              <li key={item.id} className="w-full">
-                <button
-                  onClick={() => handleItemClick(item.id)}
-                  className={cn(
-                    'w-full px-6 py-3 rounded-lg transition-all duration-300 flex justify-center',
-                    activeSection === item.id
-                      ? theme === 'dark' 
-                        ? 'bg-white text-futuristic-darkpurple' 
-                        : 'bg-futuristic-darkpurple text-white'
-                      : theme === 'dark'
-                        ? 'text-gray-200 hover:bg-white/10'
-                        : 'text-gray-600 hover:bg-black/10'
-                  )}
-                  aria-label={item.label}
-                >
-                  <span className="text-base font-medium">{item.label}</span>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </SheetContent>
-      </Sheet>
-    </div>
-  );
 
-  // We're now only returning the desktop nav as we've moved the mobile nav to the Index.tsx
+  // We're now only returning the desktop nav
   return (
     <nav className="flex justify-center mt-6 mb-2 md:mt-8 md:mb-4">
       <DesktopNav />
-      {/* Mobile nav is now rendered in Index.tsx */}
     </nav>
   );
 };
