@@ -125,3 +125,37 @@
 .light-theme footer {
   @apply text-gray-600;
 }
+
+/* Improved text contrast for light theme */
+.light-theme p {
+  @apply text-gray-700;
+}
+
+.light-theme .text-gray-300,
+.light-theme .text-gray-400 {
+  @apply text-gray-700;
+}
+
+.light-theme .text-gray-500 {
+  @apply text-gray-600;
+}
+
+.light-theme h1,
+.light-theme h2, 
+.light-theme h3,
+.light-theme h4,
+.light-theme h5,
+.light-theme h6 {
+  @apply text-gray-900;
+}
+
+.light-theme .font-medium.text-white {
+  @apply text-gray-800;
+}
+
+/* Keep purple text elements as they are */
+.light-theme .text-futuristic-purple,
+.light-theme .text-futuristic-lightpurple,
+.light-theme .text-gradient {
+  /* These will remain unchanged */
+}

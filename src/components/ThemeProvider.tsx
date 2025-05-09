@@ -19,6 +19,13 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     if (storedTheme) {
       setTheme(storedTheme);
       document.documentElement.classList.toggle('light-theme', storedTheme === 'light');
+    } else {
+      // Check if user prefers light mode from system preferences
+      const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (!prefersDarkMode) {
+        setTheme('light');
+        document.documentElement.classList.add('light-theme');
+      }
     }
   }, []);
 
