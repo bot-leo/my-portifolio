@@ -53,17 +53,17 @@ const HomeSection: React.FC<HomeSectionProps> = ({ active }) => {
         {/* Left side - Profile */}
         <div className="md:w-1/3 flex flex-col items-center border-r border-white/10 pr-6">
           <Avatar className="w-40 h-40 border-4 border-futuristic-purple/30 shadow-glow mb-6">
-            <AvatarImage src="/lovable-uploads/20e3eedc-db61-4130-9388-80717cb4650c.png" alt="Foto de Perfil" />
-            <AvatarFallback className="bg-futuristic-purple/30 text-xl">LS</AvatarFallback>
+            <AvatarImage src="https://media.licdn.com/dms/image/v2/D4D03AQHYOBTBd-SJcw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1688691094693?e=1752105600&v=beta&t=CDqA8w836GZkPzZl9eIIxVrAWWq6ByYR-ZWKwZ6NffU" alt="Foto de Perfil" />
+            <AvatarFallback className="bg-futuristic-purple/30 text-xl">LL</AvatarFallback>
           </Avatar>
-          
+
           <h1 className="text-2xl font-bold mb-1">Leonardo Lima De Souza</h1>
-          <h2 className="text-lg text-gray-300 mb-4">Desenvolvedor Web & Mobile</h2>
-          <p className="text-gray-400 text-center mb-6">Itaqua, São Paulo Brasil</p>
-          
+          <h2 className="text-lg text-gray-300 mb-4">Desenvolvedor Front-End JS</h2>
+          <p className="text-gray-400 text-center mb-6">São Paulo Brasil</p>
+
           <div className="flex flex-col space-y-3 w-full">
-            <a 
-              href="https://github.com" 
+            <a
+              href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-2 border border-white/10 rounded-full py-2 px-6 hover:bg-white/5 transition-colors"
@@ -71,9 +71,9 @@ const HomeSection: React.FC<HomeSectionProps> = ({ active }) => {
               <Github size={18} />
               <span>GitHub</span>
             </a>
-            
-            <a 
-              href="https://linkedin.com" 
+
+            <a
+              href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-2 border border-white/10 rounded-full py-2 px-6 hover:bg-white/5 transition-colors"
@@ -81,9 +81,9 @@ const HomeSection: React.FC<HomeSectionProps> = ({ active }) => {
               <Linkedin size={18} />
               <span>LinkedIn</span>
             </a>
-            
-            <a 
-              href="https://wa.me/5511999999999" 
+
+            <a
+              href="https://wa.me/5511999999999"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-2 border border-white/10 rounded-full py-2 px-6 hover:bg-white/5 transition-colors"
@@ -96,23 +96,23 @@ const HomeSection: React.FC<HomeSectionProps> = ({ active }) => {
             </a>
           </div>
         </div>
-        
+
         {/* Right side - Content */}
         <div className="md:w-2/3 pl-0 md:pl-8 pt-8 md:pt-0">
-          <h2 className="text-3xl font-bold mb-6">Seja Bem Vindo!</h2>
-          
+          <h2 className="text-3xl font-bold mb-6">Olá Bem Vindo!</h2>
+
           <p className="text-gray-300 mb-6">
-            Olá, sou desenvolvedor Front-End JavaScript web & mobile. Com boas referências de designer, sempre seguindo os principais padrões de UX & UI e design system para um layout mais inteligente e eficiente. Como principal Stack junto ao JS utilizo a biblioteca ReactJS e frameworks CSS para complementar.
+            Com foco total em JavaScript, venho me especializando em Front-End. Desenvolvo layouts performáticos e adaptáveis utilizando as principais ferramentas e tecnologias do mercado. Sempre baseado em princípios de design e padrões de UX/UI, busco trazer sutileza e praticidade a cada linha de código.
+            <br />
+            <br />
+            Dominando ReactJS, considero o Clean Code e os princípios do S.O.L.I.D. como práticas fundamentais para o desenvolvimento de projetos sólidos, seguros e performáticos, sempre com foco na manutenção e escalabilidade da aplicação.
+            <br />
+            <br />
+            Como grande entusiasta de tecnologia, combino abordagens tradicionais com métodos modernos para oferecer soluções consistentes e atualizadas, sempre priorizando a acessibilidade do usuário e uma arquitetura de componentes que favoreça a reutilização de código, seja na depuração de funcionalidades ou na realização de testes da aplicação.
           </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-            <SkillProgressCircle name="ReactJS" percentage={99} />
-            <SkillProgressCircle name="ReactNative" percentage={100} />
-            <SkillProgressCircle name="JavaScript" percentage={88} />
-          </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

@@ -24,15 +24,15 @@ const ContactSection: React.FC<ContactSectionProps> = ({ active }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulação de envio do formulário
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
     toast({
       title: "Mensagem enviada!",
       description: "Obrigado pelo contato. Retornarei em breve.",
     });
-    
+
     setFormData({ name: '', email: '', message: '' });
     setIsSubmitting(false);
   };
@@ -42,7 +42,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ active }) => {
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gradient flex items-center">
         <Mail className="mr-2" /> Contato
       </h2>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div>
           <h3 className="text-xl font-bold mb-6 text-futuristic-lightpurple">Entre em contato</h3>
@@ -60,7 +60,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ active }) => {
                 placeholder="Seu nome"
               />
             </div>
-            
+
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">Email</label>
               <input
@@ -74,7 +74,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ active }) => {
                 placeholder="seu.email@exemplo.com"
               />
             </div>
-            
+
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">Mensagem</label>
               <textarea
@@ -88,7 +88,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ active }) => {
                 placeholder="Sua mensagem..."
               />
             </div>
-            
+
             <button
               type="submit"
               disabled={isSubmitting}
@@ -104,23 +104,23 @@ const ContactSection: React.FC<ContactSectionProps> = ({ active }) => {
             </button>
           </form>
         </div>
-        
+
         <div className="animate-delay-100">
           <h3 className="text-xl font-bold mb-6 text-futuristic-lightpurple">Informações de contato</h3>
-          
+
           <div className="space-y-6">
             <div>
               <p className="text-gray-300 mb-1">Email:</p>
-              <a href="mailto:contato@seudominio.com" className="text-futuristic-purple hover:text-futuristic-lightpurple transition-colors">
-                contato@seudominio.com
+              <a href="mailto:leonardo02lima@gmail.com" className="text-futuristic-purple hover:text-futuristic-lightpurple transition-colors">
+                leonardo02lima@gmail.com
               </a>
             </div>
-            
+
             <div>
               <p className="text-gray-300 mb-1">Localização:</p>
               <p className="text-white">São Paulo, Brasil</p>
             </div>
-            
+
             <div>
               <p className="text-gray-300 mb-3">Redes sociais:</p>
               <div className="flex space-x-4">
@@ -150,7 +150,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ active }) => {
                 </a>
               </div>
             </div>
-            
+
             <div className="mt-8 p-6 bg-black/20 backdrop-blur-sm rounded-xl border border-white/5">
               <h4 className="text-futuristic-lightpurple font-medium mb-2">Disponível para oportunidades</h4>
               <p className="text-gray-300">

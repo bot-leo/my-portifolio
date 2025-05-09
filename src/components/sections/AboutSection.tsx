@@ -28,13 +28,13 @@ const AboutSection: React.FC<AboutSectionProps> = ({ active }) => {
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gradient flex items-center">
         <User className="mr-2" /> Sobre mim
       </h2>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div>
           <h3 className="text-xl font-bold mb-4 text-futuristic-lightpurple">Quem sou</h3>
           <p className="text-gray-300 mb-4">
             Sou um desenvolvedor frontend apaixonado por criar experiências web incríveis e de alto desempenho.
-            Com mais de 5 anos de experiência no desenvolvimento de aplicações web modernas, 
+            Com mais de 5 anos de experiência no desenvolvimento de aplicações web modernas,
             especializei-me em React, TypeScript e arquitetura de software.
           </p>
           <p className="text-gray-300">
@@ -42,45 +42,31 @@ const AboutSection: React.FC<AboutSectionProps> = ({ active }) => {
             sempre buscando soluções elegantes para problemas complexos. Tenho grande interesse
             em acessibilidade, performance e arquitetura de componentes reutilizáveis.
           </p>
-          
+
           <div className="mt-6">
-            <h3 className="text-xl font-bold mb-4 text-futuristic-lightpurple">Formação</h3>
+            <h3 className="text-xl font-bold mb-4 text-futuristic-lightpurple">Formação Academica</h3>
+
             <div className="mb-2">
               <p className="font-medium text-white">Bacharelado em Ciência da Computação</p>
-              <p className="text-gray-400">Universidade Federal - 2014-2018</p>
+              <p className="text-gray-400">Faculdades Metropolitanas Unidas(FMU) - 2018-2021</p>
+            </div>
+            <div className="mb-2">
+              <p className="font-medium text-white">Tecnico em Informatica & desenvolvimento web</p>
+              <p className="text-gray-400">ETEC - Escola Técnica Estadual de São Paulo - 2014-2016</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="mt-6">
+            <h3 className="text-xl font-bold mb-4 text-futuristic-lightpurple">Certificações</h3>
+            <div className="mb-2">
+              <p className="font-medium text-white"> Curso React + Redux: Fundamentos e 2 Apps do Absoluto ZERO!</p>
+              <p className="text-gray-400">https://www.udemy.com/certificate/UC-3106dd8b-b870-4596-94b1-5ac9681616a9/</p>
             </div>
             <div className="mb-2">
               <p className="font-medium text-white">MBA em Engenharia de Software</p>
               <p className="text-gray-400">Instituto de Tecnologia - 2019-2021</p>
-            </div>
-          </div>
-        </div>
-        
-        <div>
-          <h3 className="text-xl font-bold mb-4 text-futuristic-lightpurple">Habilidades</h3>
-          <div className="space-y-4">
-            {skills.map(skill => (
-              <div key={skill.name}>
-                <div className="flex justify-between mb-1">
-                  <span className="text-white">{skill.name}</span>
-                  <span className="text-futuristic-purple">{skill.level}%</span>
-                </div>
-                <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
-                  <div 
-                    className="h-full bg-gradient-to-r from-futuristic-purple to-futuristic-blue"
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="mt-8">
-            <h3 className="text-xl font-bold mb-4 text-futuristic-lightpurple">Idiomas</h3>
-            <div className="space-y-2">
-              <p className="text-white">Português <span className="text-gray-400">(Nativo)</span></p>
-              <p className="text-white">Inglês <span className="text-gray-400">(Fluente)</span></p>
-              <p className="text-white">Espanhol <span className="text-gray-400">(Intermediário)</span></p>
             </div>
           </div>
         </div>
