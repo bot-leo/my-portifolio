@@ -2,27 +2,11 @@
 import React from 'react';
 import { User } from 'lucide-react';
 
-interface Skill {
-  name: string;
-  level: number;
-}
-
 interface AboutSectionProps {
   active: boolean;
 }
 
 const AboutSection: React.FC<AboutSectionProps> = ({ active }) => {
-  const skills: Skill[] = [
-    { name: 'React', level: 95 },
-    { name: 'TypeScript', level: 90 },
-    { name: 'JavaScript', level: 95 },
-    { name: 'HTML/CSS', level: 90 },
-    { name: 'Redux', level: 85 },
-    { name: 'Node.js', level: 75 },
-    { name: 'Next.js', level: 80 },
-    { name: 'Tailwind CSS', level: 85 },
-  ];
-
   return (
     <div className="animate-fade-in">
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gradient flex items-center">
