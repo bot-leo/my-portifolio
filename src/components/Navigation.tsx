@@ -17,12 +17,12 @@ interface NavigationProps {
 const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection }) => {
   const { theme } = useTheme();
   const isMobile = useIsMobile();
-  
+
   const navItems: NavigationItem[] = [
     { id: 'home', label: 'Inicio' },
     { id: 'about', label: 'Sobre' },
     { id: 'experience', label: 'Experiência' },
-    { id: 'projects', label: 'Projetos' },
+    //{ id: 'projects', label: 'Projetos' },
     { id: 'contact', label: 'Contato' }
   ];
 
@@ -36,8 +36,8 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection
             className={cn(
               'px-6 py-2 rounded-full transition-all duration-300',
               activeSection === item.id
-                ? theme === 'dark' 
-                  ? 'bg-white text-futuristic-darkpurple' 
+                ? theme === 'dark'
+                  ? 'bg-white text-futuristic-darkpurple'
                   : 'bg-futuristic-darkpurple text-white'
                 : theme === 'dark'
                   ? 'text-gray-200 hover:bg-white/10'

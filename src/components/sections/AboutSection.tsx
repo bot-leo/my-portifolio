@@ -10,7 +10,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ active }) => {
   return (
     <div className="animate-fade-in">
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gradient flex items-center">
-        <User className="mr-2" /> Sobre mim
+        <User className="mr-2 text-futuristic-lightpurple" size={38} /> Sobre mim
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -46,11 +46,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ active }) => {
             <h3 className="text-xl font-bold mb-4 text-futuristic-lightpurple">Certificações</h3>
             <div className="mb-2">
               <p className="font-medium text-white"> Curso React + Redux: Fundamentos e 2 Apps do Absoluto ZERO!</p>
-              <p className="text-gray-400">https://www.udemy.com/certificate/UC-3106dd8b-b870-4596-94b1-5ac9681616a9/</p>
-            </div>
-            <div className="mb-2">
-              <p className="font-medium text-white">MBA em Engenharia de Software</p>
-              <p className="text-gray-400">Instituto de Tecnologia - 2019-2021</p>
+              <p className="text-gray-400 link">https://www.udemy.com/certificate/UC-3106dd8b-b870-4596-94b1-5ac9681616a9/</p>
             </div>
           </div>
         </div>

@@ -40,7 +40,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ active }) => {
   return (
     <div className="animate-fade-in">
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gradient flex items-center">
-        <Mail className="mr-2" /> Contato
+        <Mail className="mr-2 text-futuristic-lightpurple" size={38} /> Contato
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -56,7 +56,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ active }) => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-futuristic-purple/50"
+                className="w-full bg-black/10 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-futuristic-purple/50"
                 placeholder="Seu nome"
               />
             </div>
@@ -70,7 +70,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ active }) => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-futuristic-purple/50"
+                className="w-full bg-black/10 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-futuristic-purple/50"
                 placeholder="seu.email@exemplo.com"
               />
             </div>
@@ -84,7 +84,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ active }) => {
                 onChange={handleChange}
                 required
                 rows={5}
-                className="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-futuristic-purple/50"
+                className="w-full bg-black/10 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-futuristic-purple/50"
                 placeholder="Sua mensagem..."
               />
             </div>
@@ -128,7 +128,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ active }) => {
                   href="#linkedin"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-black/30 border border-white/10 rounded-full p-3 text-futuristic-lightpurple hover:text-futuristic-purple hover:border-futuristic-purple/50 transition-all duration-300"
+                  className="bg-black/10 border border-white/10 rounded-full p-3 text-futuristic-lightpurple hover:text-futuristic-purple hover:border-futuristic-purple/50 transition-all duration-300"
                 >
                   <Linkedin size={20} />
                 </a>
@@ -136,17 +136,9 @@ const ContactSection: React.FC<ContactSectionProps> = ({ active }) => {
                   href="#github"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-black/30 border border-white/10 rounded-full p-3 text-futuristic-lightpurple hover:text-futuristic-purple hover:border-futuristic-purple/50 transition-all duration-300"
+                  className="bg-black/10 border border-white/10 rounded-full p-3 text-futuristic-lightpurple hover:text-futuristic-purple hover:border-futuristic-purple/50 transition-all duration-300"
                 >
                   <Github size={20} />
-                </a>
-                <a
-                  href="#twitter"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-black/30 border border-white/10 rounded-full p-3 text-futuristic-lightpurple hover:text-futuristic-purple hover:border-futuristic-purple/50 transition-all duration-300"
-                >
-                  <Twitter size={20} />
                 </a>
               </div>
             </div>

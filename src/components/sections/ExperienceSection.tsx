@@ -96,34 +96,34 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ active }) => {
   return (
     <div className="animate-fade-in">
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gradient flex items-center">
-        <Briefcase className="mr-2" /> Experiência Profissional
+        <Briefcase className="mr-2 text-futuristic-lightpurple" size={38} /> Experiência Profissional
       </h2>
-      
+
       <div className="space-y-10 overflow-y-auto max-h-[calc(100vh-300px)]">
         {experiences.map((exp, index) => (
-          <div 
-            key={exp.id} 
+          <div
+            key={exp.id}
             className={cn(
               "relative border-l-2 border-futuristic-purple/30 pl-6 pb-4",
-              {"animate-delay-100": index === 1, "animate-delay-200": index === 2, "animate-delay-300": index === 3}
+              { "animate-delay-100": index === 1, "animate-delay-200": index === 2, "animate-delay-300": index === 3 }
             )}
           >
             <div className="absolute w-4 h-4 bg-futuristic-purple rounded-full -left-[9px] top-1"></div>
-            
+
             <h3 className="text-xl md:text-2xl font-bold text-white mb-1">{exp.company}</h3>
             <p className="text-futuristic-lightpurple mb-2">{exp.position} | {exp.period}</p>
-            
+
             <ul className="list-disc list-inside text-gray-300 mb-4 space-y-1">
               {exp.description.map((item, idx) => (
                 <li key={idx} className="ml-4">{item}</li>
               ))}
             </ul>
-            
+
             {exp.technologies && (
               <div className="flex flex-wrap gap-2 mt-4">
                 {exp.technologies.map(tech => (
-                  <span 
-                    key={tech} 
+                  <span
+                    key={tech}
                     className="bg-futuristic-purple/20 text-futuristic-lightpurple px-3 py-1 rounded-full text-sm"
                   >
                     {tech}
