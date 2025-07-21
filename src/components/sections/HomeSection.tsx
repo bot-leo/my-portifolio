@@ -53,7 +53,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({ active }) => {
         {/* Left side - Profile - Full width on mobile */}
         <div className="md:w-1/3 w-full flex flex-col items-center md:border-r border-white/10 md:pr-6 mb-8 md:mb-0">
           <Avatar className="w-32 h-32 md:w-40 md:h-40 border-4 border-futuristic-purple/30 shadow-glow mb-6">
-            <AvatarImage src="https://media.licdn.com/dms/image/v2/D4D03AQHYOBTBd-SJcw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1688691094693?e=1752105600&v=beta&t=CDqA8w836GZkPzZl9eIIxVrAWWq6ByYR-ZWKwZ6NffU" alt="Foto de Perfil" />
+            <AvatarImage src="https://media.licdn.com/dms/image/v2/D4D03AQH4cfAyNCi01g/profile-displayphoto-scale_200_200/B4DZgV1gx7HYAY-/0/1752713007877?e=1755734400&v=beta&t=mFUdqeM5iQJUWTqOdPVITCJ_0d0O_S-UEQiq0gKGW6g" alt="Foto de Perfil" />
             <AvatarFallback className="bg-futuristic-purple/30 text-xl">LL</AvatarFallback>
           </Avatar>
 
@@ -64,7 +64,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({ active }) => {
           {/* Social icons - Row on mobile, Column on desktop */}
           <div className="flex flex-row md:flex-col space-y-0 space-x-4 md:space-x-0 md:space-y-3 w-full justify-center md:justify-start">
             <a
-              href="https://github.com"
+              href="https://github.com/bot-leo"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center border border-white/10 md:rounded-full rounded-full md:py-2 md:px-6 p-3 hover:bg-white/5 transition-colors"
@@ -74,7 +74,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({ active }) => {
             </a>
 
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/leonardo-lima-de-souza/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center border border-white/10 md:rounded-full rounded-full md:py-2 md:px-6 p-3 hover:bg-white/5 transition-colors"
@@ -84,7 +84,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({ active }) => {
             </a>
 
             <a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5511910679181"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center border border-white/10 md:rounded-full rounded-full md:py-2 md:px-6 p-3 hover:bg-white/5 transition-colors"
